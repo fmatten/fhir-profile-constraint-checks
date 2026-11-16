@@ -1,0 +1,33 @@
+FHIR Validation tool Version 6.10.4 (Git# 1b90fb13f77b). Built 2026-09-04T05:45:41.468Z (73 days old)
+  Java:   21.0.13 from /usr/lib/jvm/java-21-openjdk-amd64 on amd64 (64bit). 7876MB available
+  Paths:  Current = <repo>/validator-extensible-binding, Package Cache = ~/.fhir/packages
+  Params: obs-vscode.json -version 4.0.1 -tx n/a
+  Locale: Deutschland/DE
+  Jurisdiction: Germany
+Loading
+  Loading FHIR v4.0.1 from hl7.fhir.r4.core#4.0.1
+  Load hl7.terminology.r4#6.2.0 - 4288 resources (00:03.690)
+  Load hl7.fhir.uv.extensions.r4#5.2.0 - 759 resources (00:01.445)
+  Loaded FHIR - 8265 resources (00:00.000)
+  Terminology server null - Version n/a: No Terminology Server (00:00.000)
+  Load hl7.terminology#7.5.0 - 4190 resources (00:02.966)
+  Load hl7.terminology.r5#7.5.0 - 4190 resources (00:00.765)
+  Load hl7.fhir.uv.extensions#5.4.0 - 885 resources (00:00.010)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.1.0, hl7.terminology.r4#6.2.0, hl7.fhir.uv.extensions.r4#5.2.0, hl7.terminology#7.5.0, hl7.terminology.r5#7.5.0, hl7.fhir.uv.extensions#5.4.0]
+  Terminology Cache at /tmp/default-tx-cache
+  Get set... 
+  ...go! (00:01.178)
+Cached new session. Cache size = 1
+Sources to validate: obs-vscode.json
+Validating
+  Validate obs-vscode.json
+ 00:00.093
+Done. Times: Loading: 00:10.109, validation: 00:00.093. Memory = 601Mb
+
+Success: 0 errors, 4 warnings, 1 notes
+  Information @ Observation.interpretation[0].coding[0].display (line 1, col309): There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H for language(s) 'de'. The display is 'High' which is a valid display for the default language, validating against Base FHIR Standard
+  Warning @ Observation (line 1, col311): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation), validating against Base FHIR Standard
+  Warning @ Observation (line 1, col311): Alle Observations sollten ein Subject haben
+  Warning @ Observation (line 1, col311): Alle Observations sollten einen Performer haben
+  Warning @ Observation (line 1, col311): Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
+Done. Times: Loading: 00:10.109, validation: 00:00.093. Max Memory = 7Gb

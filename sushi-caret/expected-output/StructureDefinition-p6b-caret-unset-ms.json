@@ -1,0 +1,23 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "p6b-caret-unset-ms",
+  "url": "http://example.org/fhir/test-caret/StructureDefinition/p6b-caret-unset-ms",
+  "version": "0.1.0",
+  "name": "P6bCaretUnsetMS",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://example.org/fhir/test-caret/StructureDefinition/p6a-parent-ms",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"resourceType":"Observation","id":"ext-fremd","status":"final","code":{"coding":[{"system":"http://loinc.org","code":"2339-0","display":"Glucose [Mass/volume] in Blood"}]},"interpretation":[{"coding":[{"system":"http://fhir.hospital-x.test/CodeSystem/interpretation","code":"XY","display":"lokaler Code"}]}]}

@@ -1,0 +1,22 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "p5-dedicated-widen-cardinality",
+  "url": "http://example.org/fhir/test-caret/StructureDefinition/p5-dedicated-widen-cardinality",
+  "version": "0.1.0",
+  "name": "P5DedicatedWidenCardinality",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation"
+      }
+    ]
+  }
+}

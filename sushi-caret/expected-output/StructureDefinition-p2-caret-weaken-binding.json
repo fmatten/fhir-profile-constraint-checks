@@ -1,0 +1,33 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "p2-caret-weaken-binding",
+  "url": "http://example.org/fhir/test-caret/StructureDefinition/p2-caret-weaken-binding",
+  "version": "0.1.0",
+  "name": "P2CaretWeakenBinding",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationStatus"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes providing the status of an observation.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-status|4.0.1"
+        }
+      }
+    ]
+  }
+}

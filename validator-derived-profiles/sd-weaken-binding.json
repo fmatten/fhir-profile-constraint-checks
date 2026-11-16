@@ -1,0 +1,6 @@
+{"resourceType":"StructureDefinition","id":"test-weaken","url":"http://example.org/fhir/StructureDefinition/test-weaken","name":"TestWeaken","status":"draft","kind":"resource","abstract":false,"type":"Observation","baseDefinition":"http://hl7.org/fhir/StructureDefinition/Observation","derivation":"constraint",
+"differential":{"element":[
+ {"id":"Observation","path":"Observation"},
+ {"id":"Observation.status","path":"Observation.status","min":0,"binding":{"strength":"example","valueSet":"http://hl7.org/fhir/ValueSet/observation-status"}},
+ {"id":"Observation.code","path":"Observation.code","mustSupport":true,"binding":{"strength":"required","valueSet":"http://hl7.org/fhir/ValueSet/observation-codes"}}
+]}}

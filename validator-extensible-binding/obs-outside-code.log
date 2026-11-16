@@ -1,0 +1,34 @@
+FHIR Validation tool Version 6.10.4 (Git# 1b90fb13f77b). Built 2026-09-04T05:45:41.468Z (73 days old)
+  Java:   21.0.13 from /usr/lib/jvm/java-21-openjdk-amd64 on amd64 (64bit). 7876MB available
+  Paths:  Current = <repo>/validator-extensible-binding, Package Cache = ~/.fhir/packages
+  Params: obs-outside-code.json -version 4.0.1 -tx n/a
+  Locale: Deutschland/DE
+  Jurisdiction: Germany
+Loading
+  Loading FHIR v4.0.1 from hl7.fhir.r4.core#4.0.1
+  Load hl7.terminology.r4#6.2.0 - 4288 resources (00:04.439)
+  Load hl7.fhir.uv.extensions.r4#5.2.0 - 759 resources (00:01.296)
+  Loaded FHIR - 8265 resources (00:00.000)
+  Terminology server null - Version n/a: No Terminology Server (00:00.000)
+  Load hl7.terminology#7.5.0 - 4190 resources (00:02.207)
+  Load hl7.terminology.r5#7.5.0 - 4190 resources (00:00.678)
+  Load hl7.fhir.uv.extensions#5.4.0 - 885 resources (00:00.007)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.1.0, hl7.terminology.r4#6.2.0, hl7.fhir.uv.extensions.r4#5.2.0, hl7.terminology#7.5.0, hl7.terminology.r5#7.5.0, hl7.fhir.uv.extensions#5.4.0]
+  Terminology Cache at /tmp/default-tx-cache
+  Get set... 
+  ...go! (00:01.263)
+Cached new session. Cache size = 1
+Sources to validate: obs-outside-code.json
+Validating
+  Validate obs-outside-code.json
+ 00:00.645
+Done. Times: Loading: 00:09.937, validation: 00:00.646. Memory = 497Mb
+
+Success: 0 errors, 6 warnings, 0 notes
+  Warning @ Observation.interpretation[0].coding[0].system (line 1, col308): Das CodeSystem http://fhir.hospital-x.test/CodeSystem/interpretation ist unbekannt, validating against Base FHIR Standard
+  Warning @ Observation.interpretation[0] (line 1, col308): Keiner der angegebenen Codes ist im Valueset 'Observation Interpretation Codes' (http://hl7.org/fhir/ValueSet/observation-interpretation|4.0.1), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthￃﾤlt keinen geeigneten Code) (Codes = http://fhir.hospital-x.test/CodeSystem/interpretation#XY), validating against Base FHIR Standard
+  Warning @ Observation (line 1, col310): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation), validating against Base FHIR Standard
+  Warning @ Observation (line 1, col310): Alle Observations sollten ein Subject haben
+  Warning @ Observation (line 1, col310): Alle Observations sollten einen Performer haben
+  Warning @ Observation (line 1, col310): Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
+Done. Times: Loading: 00:09.937, validation: 00:00.646. Max Memory = 7Gb

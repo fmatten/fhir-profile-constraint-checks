@@ -1,0 +1,32 @@
+FHIR Validation tool Version 6.10.4 (Git# 1b90fb13f77b). Built 2026-09-04T05:45:41.468Z (72 days old)
+  Java:   21.0.13 from /usr/lib/jvm/java-21-openjdk-amd64 on amd64 (64bit). 7876MB available
+  Paths:  Current = <repo>/validator-derived-profiles, Package Cache = ~/.fhir/packages
+  Params: sd-meaningwhenmissing.json -version 4.0.1 -tx n/a
+  Locale: Deutschland/DE
+  Jurisdiction: Germany
+Loading
+  Loading FHIR v4.0.1 from hl7.fhir.r4.core#4.0.1
+  Load hl7.terminology.r4#6.2.0 - 4288 resources (00:03.318)
+  Load hl7.fhir.uv.extensions.r4#5.2.0 - 759 resources (00:01.438)
+  Loaded FHIR - 8265 resources (00:00.000)
+  Terminology server null - Version n/a: No Terminology Server (00:00.000)
+  Load hl7.terminology#7.5.0 - 4190 resources (00:01.573)
+  Load hl7.terminology.r5#7.5.0 - 4190 resources (00:00.595)
+  Load hl7.fhir.uv.extensions#5.4.0 - 885 resources (00:00.006)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.1.0, hl7.terminology.r4#6.2.0, hl7.fhir.uv.extensions.r4#5.2.0, hl7.terminology#7.5.0, hl7.terminology.r5#7.5.0, hl7.fhir.uv.extensions#5.4.0]
+  Terminology Cache at /tmp/default-tx-cache
+  Get set... 
+  ...go! (00:00.679)
+Cached new session. Cache size = 1
+Sources to validate: sd-meaningwhenmissing.json
+Validating
+  Validate sd-meaningwhenmissing.json
+ 00:00.120
+Done. Times: Loading: 00:07.663, validation: 00:00.120. Memory = 451Mb
+
+*FAILURE*: 3 errors, 1 warnings, 0 notes
+  Warning @ StructureDefinition (line 1, col4): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation), validating against Base FHIR Standard
+  Error @ StructureDefinition.differential.element[1]: No match found for Observation.interpretation in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+  Error @ StructureDefinition: The profile http://example.org/fhir/StructureDefinition/test-mwm has 1 element in the differential (id: Observation.interpretation) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)
+  Error @ StructureDefinition.differential.element[1]: The element definition for Observation.interpretation has a property meaningWhenMissing which is not allowed in a profile
+Done. Times: Loading: 00:07.663, validation: 00:00.120. Max Memory = 7Gb

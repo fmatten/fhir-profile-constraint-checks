@@ -1,0 +1,24 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "p3-caret-widen-cardinality",
+  "url": "http://example.org/fhir/test-caret/StructureDefinition/p3-caret-widen-cardinality",
+  "version": "0.1.0",
+  "name": "P3CaretWidenCardinality",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "min": 0,
+        "max": "*"
+      }
+    ]
+  }
+}

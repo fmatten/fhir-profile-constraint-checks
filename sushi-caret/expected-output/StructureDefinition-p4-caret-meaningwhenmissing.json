@@ -1,0 +1,23 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "p4-caret-meaningwhenmissing",
+  "url": "http://example.org/fhir/test-caret/StructureDefinition/p4-caret-meaningwhenmissing",
+  "version": "0.1.0",
+  "name": "P4CaretMeaningWhenMissing",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "meaningWhenMissing": "Wenn fehlend: Befund unauffällig."
+      }
+    ]
+  }
+}

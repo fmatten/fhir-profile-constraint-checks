@@ -1,0 +1,65 @@
+FHIR Validation tool Version 6.10.4 (Git# 1b90fb13f77b). Built 2026-09-04T05:45:41.468Z (72 days old)
+  Java:   21.0.13 from /usr/lib/jvm/java-21-openjdk-amd64 on amd64 (64bit). 7876MB available
+  Paths:  Current = <repo>/sushi-caret, Package Cache = ~/.fhir/packages
+  Params: fsh-generated/resources/StructureDefinition-p2-caret-weaken-binding.json fsh-generated/resources/StructureDefinition-p3-caret-widen-cardinality.json fsh-generated/resources/StructureDefinition-p4-caret-meaningwhenmissing.json fsh-generated/resources/StructureDefinition-p6a-parent-ms.json fsh-generated/resources/StructureDefinition-p6b-caret-unset-ms.json -version 4.0.1 -tx n/a
+  Locale: Deutschland/DE
+  Jurisdiction: Germany
+Loading
+  Loading FHIR v4.0.1 from hl7.fhir.r4.core#4.0.1
+  Load hl7.terminology.r4#6.2.0 - 4288 resources (00:03.276)
+  Load hl7.fhir.uv.extensions.r4#5.2.0 - 759 resources (00:01.513)
+  Loaded FHIR - 8265 resources (00:00.000)
+  Terminology server null - Version n/a: No Terminology Server (00:00.000)
+  Load hl7.terminology#7.5.0 - 4190 resources (00:01.670)
+  Load hl7.terminology.r5#7.5.0 - 4190 resources (00:00.622)
+  Load hl7.fhir.uv.extensions#5.4.0 - 885 resources (00:00.006)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.1.0, hl7.terminology.r4#6.2.0, hl7.fhir.uv.extensions.r4#5.2.0, hl7.terminology#7.5.0, hl7.terminology.r5#7.5.0, hl7.fhir.uv.extensions#5.4.0]
+  Terminology Cache at /tmp/default-tx-cache
+  Get set... 
+  ...go! (00:00.802)
+Cached new session. Cache size = 1
+Sources to validate: fsh-generated/resources/StructureDefinition-p2-caret-weaken-binding.jsonfsh-generated/resources/StructureDefinition-p3-caret-widen-cardinality.jsonfsh-generated/resources/StructureDefinition-p4-caret-meaningwhenmissing.jsonfsh-generated/resources/StructureDefinition-p6a-parent-ms.jsonfsh-generated/resources/StructureDefinition-p6b-caret-unset-ms.json
+Validating
+  Validate fsh-generated/resources/StructureDefinition-p2-caret-weaken-binding.json
+ 00:00.158
+  Validate fsh-generated/resources/StructureDefinition-p3-caret-widen-cardinality.json
+ 00:00.024
+  Validate fsh-generated/resources/StructureDefinition-p4-caret-meaningwhenmissing.json
+ 00:00.025
+  Validate fsh-generated/resources/StructureDefinition-p6a-parent-ms.json
+ 00:00.021
+  Validate fsh-generated/resources/StructureDefinition-p6b-caret-unset-ms.json
+ 00:00.024
+Done. Times: Loading: 00:07.939, validation: 00:00.254 (#5). Memory = 483Mb
+
+-- fsh-generated/resources/StructureDefinition-p2-caret-weaken-binding.json --------------------------------------------------------------------------------
+*FAILURE*: 1 errors, 1 warnings, 0 notes
+  Warning @ StructureDefinition (line 1, col2): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation), validating against Base FHIR Standard
+  Error @ StructureDefinition: illegal attempt to change the binding on Observation.status from required to example
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- fsh-generated/resources/StructureDefinition-p3-caret-widen-cardinality.json -----------------------------------------------------------------------------------
+*FAILURE*: 2 errors, 1 warnings, 0 notes
+  Warning @ StructureDefinition (line 1, col2): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation), validating against Base FHIR Standard
+  Error @ StructureDefinition: Element Observation.code: derived min (0) cannot be less than the base min (1) in http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+  Error @ StructureDefinition: Element Observation.code: derived max (*) cannot be greater than the base max (1)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- fsh-generated/resources/StructureDefinition-p4-caret-meaningwhenmissing.json ------------------------------------------------------------------------------------
+*FAILURE*: 1 errors, 1 warnings, 0 notes
+  Warning @ StructureDefinition (line 1, col2): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation), validating against Base FHIR Standard
+  Error @ StructureDefinition.differential.element[0]: The element definition for Observation.interpretation has a property meaningWhenMissing which is not allowed in a profile
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- fsh-generated/resources/StructureDefinition-p6a-parent-ms.json ----------------------------------------------------------------------
+Success: 0 errors, 1 warnings, 0 notes
+  Warning @ StructureDefinition (line 1, col2): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation), validating against Base FHIR Standard
+----------------------------------------------------------------------------------------------------------------------------------------
+
+-- fsh-generated/resources/StructureDefinition-p6b-caret-unset-ms.json ---------------------------------------------------------------------------
+*FAILURE*: 1 errors, 1 warnings, 0 notes
+  Warning @ StructureDefinition (line 1, col2): Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation), validating against Base FHIR Standard
+  Error @ StructureDefinition: Illegal constraint [must-support = false] when [must-support = true] in the base profile
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Done. Times: Loading: 00:07.939, validation: 00:00.254 (#5). Max Memory = 7Gb
